@@ -4,6 +4,12 @@ require "test_helper"
 require "ostruct"
 
 class NicetiesTest < Minitest::Test
+  def test_not_a
+    username = "carldaws"
+
+    assert username.not_a? Integer
+  end
+
   def test_try_all
     user = OpenStruct.new(nickname: nil, username: "carldaws")
     assert_equal "carldaws", user.try_all(:nickname, :username)

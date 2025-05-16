@@ -24,4 +24,10 @@ class NicetiesTest < Minitest::Test
     user = OpenStruct.new(nickname: "", username: nil)
     assert_equal "carldaws", user.coalesce(:nickname, :username, "carldaws")
   end
+
+  def test_tidy
+    my_array = ["", nil, 4]
+
+    assert_equal [4], my_array.tidy
+  end
 end

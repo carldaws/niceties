@@ -10,9 +10,9 @@ class NicetiesTest < Minitest::Test
     assert username.not_a? Integer
   end
 
-  def test_try_all
+  def test_try_each
     user = OpenStruct.new(nickname: nil, username: "carldaws")
-    assert_equal "carldaws", user.try_all(:nickname, :username)
+    assert_equal "carldaws", user.try_each(:nickname, :username)
   end
 
   def test_coalesce

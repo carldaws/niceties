@@ -1,9 +1,11 @@
+# frozen_string_literal: true
+
 class Object
   def not_a?(klass)
     !is_a?(klass)
   end
 
-  def try_all(*methods)
+  def try_each(*methods)
     methods.each do |method|
       result = try(method)
       return result unless result.nil?

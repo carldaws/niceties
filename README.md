@@ -21,6 +21,44 @@ You should be able to drop Niceties into your app and feel like it’s always be
 
 ---
 
+## What's on the Menu
+
+Niceties provides the following methods so far:
+
+### Object
+
+```rb
+# Object.try_each
+@user.try_each(:full_name, :nickname, :username) # instead of @user&.full_name || @user&.nickname || @user&.username
+
+# Object.coalesce
+@user.coalesce(:full_name, :nickname, "Valued Customer") # instead of @user&.full_name || @user&.nickname || "Valued Customer"
+
+# Object.not_a?
+@user.not_a? Widget # instead of !@user.is_a? Widget
+```
+
+### Array
+
+```rb
+# Array.tidy
+["", nil, 4].tidy => [4] # instead of ["", nil, 4].select { it.present? } 
+```
+
+### Numerics (Integer and Float)
+
+```rb
+# Integer.percent_of
+25.percent_of(200) => 50 # instead of (200 / 100.0) * 25
+
+# Float.percent_of
+16.6.percent_of(1000) => 166 # instead of (1000 / 100.0) * 16.6
+```
+
+More methods will be coming soon and contributions are very much welcomed!
+
+---
+
 ## 🫂 Contributing
 
 Niceties is open to anyone with an idea that makes Ruby or Rails feel better to use.

@@ -5,6 +5,8 @@ require "active_support/core_ext/object/blank"
 require_relative "niceties/version"
 require_relative "niceties/object"
 require_relative "niceties/array"
+require_relative "niceties/integer"
+require_relative "niceties/float"
 
 module Niceties
 end

@@ -30,4 +30,17 @@ class NicetiesTest < Minitest::Test
 
     assert_equal [4], my_array.tidy
   end
+
+  def test_percent_of_integer
+    assert_equal 50, 25.percent_of(200)
+    assert_equal 0, 0.percent_of(200)
+    assert_equal 400, 200.percent_of(200)
+    assert_equal 0, 50.percent_of(0)
+  end
+
+  def test_percent_of_float
+    assert_equal 25.5, 50.0.percent_of(51)
+    assert_equal 166, 16.6.percent_of(1000)
+    assert_equal 0, 123.4.percent_of(0)
+  end
 end

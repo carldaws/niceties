@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["email@carldaws.com"]
 
   spec.summary       = "A collection of thoughtful Ruby and Rails helpers."
-  spec.description   = "Niceties is a carefully curated set of ergonomic Ruby and Rails extensions—small, expressive methods that make code feel more natural and joyful to write."
+  spec.description   = "Niceties is a curated set of small, ergonomic and expressive methods for Ruby and Rails."
 
   spec.homepage      = "https://github.com/carldaws/niceties"
   spec.license       = "MIT"

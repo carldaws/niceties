@@ -8,5 +8,6 @@ require_relative "niceties/array"
 require_relative "niceties/integer"
 require_relative "niceties/float"
 
+# See individual class files for implementations
 module Niceties
 end

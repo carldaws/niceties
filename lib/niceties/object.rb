@@ -1,5 +1,6 @@
 # frozen_string_literal: true
 
+# Niceties for the Object class
 class Object
   def not_a?(klass)
     !is_a?(klass)

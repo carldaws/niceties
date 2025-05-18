@@ -45,7 +45,7 @@ Niceties provides the following methods so far:
 ["", nil, 4].tidy => [4] # instead of ["", nil, 4].select { it.present? } 
 ```
 
-### Numerics (Integer and Float)
+### Numerics (Integer and Float)
 
 ```rb
 # Integer.percent_of

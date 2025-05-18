@@ -36,4 +36,16 @@ class NumericNicetiesTest < Minitest::Test
     assert_equal 50, 25.percent_of(200)
     assert_equal 166, 16.6.percent_of(1000)
   end
+
+  def test_plus_or_minus
+    assert_equal 3..7, 5.plus_or_minus(2)
+  end
+
+  def test_plus_upto
+    assert_equal 5..7, 5.plus_upto(2)
+  end
+
+  def test_minus_upto
+    assert_equal 3..5, 5.minus_upto(2)
+  end
 end

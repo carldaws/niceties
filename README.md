@@ -53,6 +53,15 @@ Niceties provides the following methods so far:
 
 # Float.percent_of
 16.6.percent_of(1000) => 166 # instead of (1000 / 100.0) * 16.6
+
+# Numeric.plus_or_minus
+5.plus_or_minus(2) => 3..7 # instead of (5-2)..(5+2)
+```
+
+### Time
+
+```rb
+User.where(created_at: Time.current.minus_upto(1.hour))
 ```
 
 More methods will be coming soon and contributions are very much welcomed!

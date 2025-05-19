@@ -49,3 +49,43 @@ class NumericNicetiesTest < Minitest::Test
     assert_equal 3..5, 5.minus_upto(2)
   end
 end
+
+class TimeNicetiesTest < Minitest::Test
+  def test_plus_or_minus
+    my_time = Time.now
+
+    assert_equal my_time.plus_or_minus(5.minutes), (my_time - 5.minutes)..(my_time + 5.minutes)
+  end
+
+  def test_plus_upto
+    my_time = Time.now
+
+    assert_equal my_time.plus_upto(5.minutes), my_time..(my_time + 5.minutes)
+  end
+
+  def test_minus_upto
+    my_time = Time.now
+
+    assert_equal my_time.minus_upto(5.minutes), (my_time - 5.minutes)..my_time
+  end
+end
+
+class DateNicetiesTest < Minitest::Test
+  def test_plus_or_minus
+    my_date = Date.today
+
+    assert_equal my_date.plus_or_minus(2.days), (my_date - 2.days)..(my_date + 2.days)
+  end
+
+  def test_plus_upto
+    my_date = Date.today
+
+    assert_equal my_date.plus_upto(2.days), my_date..(my_date + 2.days)
+  end
+
+  def test_minus_upto
+    my_date = Date.today
+
+    assert_equal my_date.minus_upto(2.days), (my_date - 2.days)..my_date
+  end
+end

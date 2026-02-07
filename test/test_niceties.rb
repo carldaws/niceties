@@ -68,6 +68,14 @@ class TimeNicetiesTest < Minitest::Test
 
     assert_equal my_time.minus_upto(5.minutes), (my_time - 5.minutes)..my_time
   end
+
+  def test_future?
+    assert (Time.current + 1.day).future?
+  end
+
+  def test_past?
+    assert (Time.current - 1.day).past?
+  end
 end
 
 class DateNicetiesTest < Minitest::Test

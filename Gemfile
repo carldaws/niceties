@@ -5,6 +5,11 @@ source "https://rubygems.org"
 # Specify your gem's dependencies in niceties.gemspec
 gemspec
 
+# Allow CI to override ActiveSupport version
+if ENV["ACTIVESUPPORT_VERSION"]
+  gem "activesupport", "~> #{ENV["ACTIVESUPPORT_VERSION"]}"
+end
+
 gem "irb"
 gem "rake", "~> 13.0"
 
